@@ -8,13 +8,21 @@ const PORT = 3000;
 const dbPath = path.join(__dirname, 'db.json');
 
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
+// Ping endpoint to check server status
 app.get('/ping', (req, res) => {
     res.json(true);
 });
 
+// Endpoint to submit data
 app.post('/submit', (req, res) => {
     const { name, email, phone, github_link, stopwatch_time } = req.body;
+
+    if (!name || !email || !phone || !github_link || !stopwatch_time) {
+        res.status(400).send('All fields are required.');
+        return;
+    }
 
     fs.readFile(dbPath, 'utf8', (err, data) => {
         if (err) {
@@ -35,9 +43,8 @@ app.post('/submit', (req, res) => {
     });
 });
 
+// Endpoint to read all submissions
 app.get('/read', (req, res) => {
-    const index = parseInt(req.query.index as string);
-
     fs.readFile(dbPath, 'utf8', (err, data) => {
         if (err) {
             res.status(500).send('Internal Server Error');
@@ -45,14 +52,11 @@ app.get('/read', (req, res) => {
         }
 
         const db = JSON.parse(data);
-        if (index >= 0 && index < db.submissions.length) {
-            res.json(db.submissions[index]);
-        } else {
-            res.status(404).send('Submission not found');
-        }
+        res.json(db.submissions);
     });
 });
 
+// Start the server
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
