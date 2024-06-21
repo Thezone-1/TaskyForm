@@ -20,7 +20,15 @@ Before you begin, ensure you have the following installed:
 2. **Install dependencies:**
 
     ```bash
+    npm install express body-parser
+    ```
+
+    ```bash
     npm install -D typescript ts-node @types/express @types/node
+    ```
+
+    ```bash
+    npm install cors
     ```
 
 ## Usage
