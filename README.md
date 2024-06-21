@@ -20,7 +20,7 @@ Before you begin, ensure you have the following installed:
 2. **Install dependencies:**
 
     ```bash
-    npm install
+    npm install -D typescript ts-node @types/express @types/node
     ```
 
 ## Usage
