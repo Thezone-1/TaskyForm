@@ -1,0 +1,12 @@
+{
+  "submissions": [
+    {
+      ".Name": "John Doe",
+      ".Email": "johndoe@gmail.com",
+      ".Phone": "9876543210",
+      ".GithubLink": "https://github.com/johndoe/my_slidely_task",
+      ".StopwatchTime": "00:01:19"
+    },
+    {}
+  ]
+}
