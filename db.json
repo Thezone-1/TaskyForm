@@ -1,12 +1,40 @@
 {
   "submissions": [
     {
-      ".Name": "John Doe",
-      ".Email": "johndoe@gmail.com",
-      ".Phone": "9876543210",
-      ".GithubLink": "https://github.com/johndoe/my_slidely_task",
-      ".StopwatchTime": "00:01:19"
+      "Name": "John Doe",
+      "Email": "johndoe@gmail.com",
+      "Phone": "9876543210",
+      "GithubLink": "https://github.com/johndoe/my_slidely_task",
+      "StopwatchTime": "00:01:19"
     },
-    {}
+    {
+      "Name": "Jane Smith",
+      "Email": "janesmith@gmail.com",
+      "Phone": "1234567890",
+      "GithubLink": "https://github.com/janesmith/project",
+      "StopwatchTime": "00:02:30"
+    },
+    {
+      "Name": "Alice Johnson",
+      "Email": "alicejohnson@gmail.com",
+      "Phone": "5551234567",
+      "GithubLink": "https://github.com/alicejohnson/work",
+      "StopwatchTime": "00:01:45"
+    },
+    {
+      "Name": "Bob Brown",
+      "Email": "bobbrown@gmail.com",
+      "Phone": "9871236540",
+      "GithubLink": "https://github.com/bobbrown/assignment",
+      "StopwatchTime": "00:03:10"
+    },
+    {},
+    {
+      "name": "ggg",
+      "email": "gggg",
+      "phone": "ggg",
+      "github_link": "gggg",
+      "stopwatch_time": "00:00:00"
+    }
   ]
 }
